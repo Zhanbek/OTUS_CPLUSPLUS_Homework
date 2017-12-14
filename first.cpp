@@ -1,5 +1,5 @@
-#include <iostream>
+#include "lib.h"
 int main(void) {
-  std::cout << "Hello, OTUS!" << std::endl;
-  return 0;
+   helloText();
+   return 0;
 }
