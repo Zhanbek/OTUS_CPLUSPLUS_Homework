@@ -4,9 +4,13 @@ project(helloworld VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 configure_file(version.h.in version.h)
 
+enable_testing()
+
 add_executable(helloworld_cli first.cpp)
 
 add_library(helloworld lib.cpp)
+
+add_test(NAME helloworld_cli COMMAND helloworld_cli)
 
 set_target_properties(helloworld_cli helloworld PROPERTIES
    CXX_STANDARD 14
