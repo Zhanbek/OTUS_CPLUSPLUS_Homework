@@ -4,7 +4,7 @@ compiler:
 - gcc
 script:
 - cmake .
-- cpack .
+- CPack .
 - cmake --build .
 - cmake --build . --target package
 deploy:
