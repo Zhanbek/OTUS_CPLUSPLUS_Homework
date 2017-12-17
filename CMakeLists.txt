@@ -1,35 +1,35 @@
 cmake_minimum_required(VERSION 3.2)
 
-project(helloworld VERSION 0.0.1)
+#project(helloworld VERSION 0.0.1)
 
-configure_file(version.h.in version.h)
+#configure_file(version.h.in version.h)
 
-enable_testing()
+#enable_testing()
 
-add_executable(helloworld_cli first.cpp)
+#add_executable(helloworld_cli first.cpp)
 
-add_library(helloworld lib.cpp)
+#add_library(helloworld lib.cpp)
 
-add_test(NAME helloworld_cli COMMAND helloworld_cli)
+#add_test(NAME helloworld_cli COMMAND helloworld_cli)
 
-set_target_properties(helloworld_cli helloworld PROPERTIES
-   CXX_STANDARD 14
-   CXX_STANDARD_REQUIRED ON
-   COMPILE_OPTIONS -Wpedantic -Wall -Wextra
-)
+#set_target_properties(helloworld_cli helloworld PROPERTIES
+#   CXX_STANDARD 14
+#   CXX_STANDARD_REQUIRED ON
+#   COMPILE_OPTIONS -Wpedantic -Wall -Wextra
+#)
 
-target_link_libraries(helloworld_cli
-   helloworld
-)
+#target_link_libraries(helloworld_cli
+#   helloworld
+#)
 
-install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
+#install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
 
-set(CPACK_GENERATOR DEB)
+#set(CPACK_GENERATOR DEB)
 
 #set(CPACK_PACKAGE_VERSION_MAJOR "&{PROJECT_VERSION_MAJOR}")
 #set(CPACK_PACKAGE_VERSION_MINOR "&{PROJECT_VERSION_MINOR}")
 #set(CPACK_PACKAGE_VERSION_PATCH "&{PROJECT_VERSION_PATCH}")
 
-set(CPACK_PACKAGE_CONTACT zhanbek.sarsenov@gmail.com)
+#set(CPACK_PACKAGE_CONTACT zhanbek.sarsenov@gmail.com)
 
-include(CPack)
+#include(CPack)
