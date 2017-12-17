@@ -3,10 +3,10 @@ compiler:
 - clang
 - gcc
 script:
-- cmake .
+- CMake .
 - CPack .
-- cmake --build .
-- cmake --build . --target package
+- CMake --build .
+- CMake --build . --target package
 deploy:
   provider: script
   skip_cleanup: true
