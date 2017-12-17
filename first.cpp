@@ -1,5 +1,5 @@
 #include "lib.h"
 int main(void) {
-   helloText();
+   writeHello();
    return 0;
 }
