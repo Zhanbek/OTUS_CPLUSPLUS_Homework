@@ -22,7 +22,7 @@ target_link_libraries(helloworld_cli
    helloworld
 )
 
-install(TARGET helloworld_cli RUNTIME DESTINATION bin)
+install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
