@@ -32,7 +32,7 @@ set(CPACK_PACKAGE_VERSION_PATCH "&{PROJECT_VERSION_PATCH}")
 
 set(CPACK_PACKAGE_CONTACT zhanbek.sarsenov@gmail.com)
 
-include(cPack)
+include(CPack)
 
 
 
