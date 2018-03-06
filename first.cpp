@@ -1,5 +1,6 @@
 #include "lib.h"
+
 int main(void) {
-   writeHello();
+   writeHello(); // Call of lib function
    return 0;
 }
