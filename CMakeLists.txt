@@ -28,8 +28,8 @@ target_link_libraries(helloworld_cli
 )
 
 target_link_libraries(test_main_cli
-	${Boost_LIBRARIES}
-    helloworld
+   ${Boost_LIBRARIES}
+   helloworld
 )
 
 install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
@@ -46,5 +46,4 @@ include(CPack)
 
 enable_testing()
 
-add_test(test_case1 test_main_cli)
-add_test(test_case2 test_main_cli) 
+add_test(test_version_valid test_main_cli)
