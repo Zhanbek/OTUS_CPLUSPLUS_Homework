@@ -2,24 +2,34 @@ cmake_minimum_required(VERSION 3.2)
 
 project(helloworld VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
-configure_file(version.h.in version.h)
+find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
-enable_testing()
+configure_file(version.h.in version.h)
 
 add_executable(helloworld_cli first.cpp)
 
 add_library(helloworld lib.cpp)
 
-add_test(NAME helloworld_cli COMMAND helloworld_cli)
+add_executable(test_main_cli test_main.cpp)
 
-set_target_properties(helloworld_cli helloworld PROPERTIES
+set_target_properties(helloworld_cli helloworld  test_version PROPERTIES
    CXX_STANDARD 14
    CXX_STANDARD_REQUIRED ON
    COMPILE_OPTIONS -Wpedantic -Wall -Wextra
 )
 
+set_target_properties(test_main_cli PROPERTIES
+    COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
+    INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
+)
+
 target_link_libraries(helloworld_cli
    helloworld
+)
+
+target_link_libraries(test_main_cli
+	${Boost_LIBRARIES}
+    helloworld
 )
 
 install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
@@ -33,3 +43,8 @@ set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
 set(CPACK_PACKAGE_CONTACT zhanbek.sarsenov@gmail.com)
 
 include(CPack)
+
+enable_testing()
+
+add_test(test_case1 test_main_cli)
+add_test(test_case2 test_main_cli) 

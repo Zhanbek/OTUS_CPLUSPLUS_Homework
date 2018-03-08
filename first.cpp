@@ -1,6 +1,9 @@
 #include "lib.h"
 
-int main(void) {
-   writeHello(); // Call of lib function
+#include <spdlog/spdlog.h>
+
+int main(int argc, char *argv[]) {
+   auto logger = spdlog::stdout_logger_mt("console");
+   logger->info("Current patch version is {}", getPatchVersion());
    return 0;
 }

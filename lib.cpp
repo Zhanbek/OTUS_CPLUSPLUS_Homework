@@ -1,5 +1,6 @@
 #include "lib.h"
+#include "version.h"
 
-void writeHello(void) {
-   std::cout << "Hello, OTUS!" << std::endl;
+int getPatchVersion() {
+	return PROJECT_VERSION;
 }
