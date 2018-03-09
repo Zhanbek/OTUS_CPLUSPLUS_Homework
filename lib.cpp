@@ -1,6 +1,6 @@
 #include "lib.h"
 #include "version.h"
 
-int  geVersionPatch() {
+int  getVersionPatch() {
     return PROJECT_VERSION_PATCH;
 }
