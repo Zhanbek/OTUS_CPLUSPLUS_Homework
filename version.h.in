@@ -1,5 +1,7 @@
 #pragma once
 
 #cmakedefine VERSION_PATCH @PROJECT_VERSION_PATCH@
-#cmakedefine VERSION_MINOR @PROJECT_VERSION_MINOR@
-#cmakedefine VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#cmakedefine VERSION_MINOR 0
+#cmakedefine VERSION_MAJOR 0
+
+#cmakedefine DEBUG
