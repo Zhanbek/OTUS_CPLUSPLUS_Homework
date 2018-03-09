@@ -2,11 +2,11 @@
 #include "version.h"
 
 int getVersionMajor() {
-    return PROJECT_VERSION_MAJOR;
+    return MAJOR;
 }
 
 int getVersionMinor() {
-    return PROJECT_VERSION_MINOR;
+    return MINOR;
 }
 
 int  getVersionPatch() {
