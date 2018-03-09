@@ -1,6 +1,15 @@
 #include "lib.h"
 #include "version.h"
 
-int getPatchVersion() {
-	return PROJECT_VERSION;
+int  geVersionPatch() {
+    return VERSION_PATCH;
 }
+
+int getVersionMinor() {
+    return VERSION_MINOR;
+}
+
+int getVersionMajor() {
+    return VERSION_MAJOR;
+}
+
