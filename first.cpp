@@ -5,14 +5,14 @@
 int main(int argc, char *argv[]) {
    std::clog<< "Hello, World!" << std::endl;    
    
-   #IFDEF DEBUG_MODE
+   #ifdef DEBUG_MODE
        auto logger = spdlog::stdout_logger_mt("console");
        logger->info("Current patch version is {}.{}.{}", 
                  getVersionMajor(),
                  getVersionMinor(),
                  getVersionPatch()
                );
-   #ENDIF
+   #endif
 
    return 0;
 }
