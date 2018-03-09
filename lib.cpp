@@ -2,5 +2,5 @@
 #include "version.h"
 
 int  geVersionPatch() {
-    return PATCH_VERSION;
+    return V;
 }
