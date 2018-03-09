@@ -2,14 +2,5 @@
 #include "version.h"
 
 int  geVersionPatch() {
-    return VERSION_PATCH;
+    return PATCH_VERSION;
 }
-
-int getVersionMinor() {
-    return VERSION_MINOR;
-}
-
-int getVersionMajor() {
-    return VERSION_MAJOR;
-}
-
