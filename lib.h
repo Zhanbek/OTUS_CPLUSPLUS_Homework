@@ -1,4 +1,6 @@
 #pragma once
 #include <iostream>
 
-int getPatchVersion();
+int getVersionPatch();
+int getVersionMinor();
+int getVersionMajor();
