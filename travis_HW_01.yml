@@ -6,9 +6,9 @@ before_script:
 - sudo apt-get install libspdlog-dev -y
 script:
 - cmake HomeWork_01/.
-- cmake --build .
-- cmake --build . --target test 
-- cmake --build . --target package
+- cmake --build HomeWork_01/.
+- cmake --build HomeWork_01/. --target test 
+- cmake --build HomeWork_01/. --target package
 deploy:
   provider: script
   skip_cleanup: true
