@@ -3,7 +3,7 @@
 #include <spdlog/spdlog.h>
 
 int main(int argc, char *argv[]) {
-   std::clog<< "Hello, World!!" << std::endl;    
+   std::clog<< "Hello, World!" << std::endl;    
    
    #ifdef DEBUG_MODE
        auto logger = spdlog::stdout_logger_mt("console");
